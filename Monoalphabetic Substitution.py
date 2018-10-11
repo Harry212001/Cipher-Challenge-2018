@@ -4,16 +4,15 @@ errorList = {"A":0,"B":0,"C":0,"D":0,"E":0,"F":0,"G":0,"H":0,"I":0,"J":0,"K":0,"
 substitutionAlphabet = {"A":'',"B":'',"C":'',"D":'',"E":'',"F":'',"G":'',"H":'',"I":'',"J":'',"K":'',"L":'',"M":'',"N":'',"O":'',"P":'',"Q":'',"R":'',"S":'',"T":'',"U":'',"V":'',"W":'',"X":'',"Y":'',"Z":''}
 CipherText = input('Input ciphertext: ')
 for lett in CipherText:
-    letterFrequencies[lett]+=1
-for lett in englishLetterFrequencies:
-    errorList = {"A": 0, "B": 0, "C": 0, "D": 0, "E": 0, "F": 0, "G": 0, "H": 0, "I": 0, "J": 0, "K": 0, "L": 0, "M": 0,
-                 "N": 0, "O": 0, "P": 0, "Q": 0, "R": 0, "S": 0, "T": 0, "U": 0, "V": 0, "W": 0, "X": 0, "Y": 0, "Z": 0}
-    for trial in letterFrequencies:
-        errorList[trial]=abs(englishLetterFrequencies[lett]-letterFrequencies[trial])
-    substitutionAlphabet[lett]=min(errorList, key=lambda k: errorList[k])
+    if ord(lett) >= 65 and ord(lett) <= 90:
+        letterFrequencies[lett]+=1
+for i in range(26):
+    substitutionAlphabet[max(letterFrequencies, key=lambda k: letterFrequencies[k])] = max(englishLetterFrequencies, key=lambda k: englishLetterFrequencies[k])
+    letterFrequencies[max(letterFrequencies, key=lambda k: letterFrequencies[k])] = 0
+    englishLetterFrequencies[max(englishLetterFrequencies, key=lambda k: englishLetterFrequencies[k])] = 0
 print(substitutionAlphabet)
 plainText = ''
 for lett in CipherText:
-    if ord(let) >= 65 and ord(let) <= 90:
+    if ord(lett) >= 65 and ord(lett) <= 90:
         plainText += substitutionAlphabet[lett]
-print(plaintText)
+print(plainText)
