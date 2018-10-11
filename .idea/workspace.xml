@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="55c61966-1f36-423f-a20c-9f949209982f" name="Default" comment="" />
+    <list default="true" id="55c61966-1f36-423f-a20c-9f949209982f" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/Vigenere Solver.py" beforeDir="false" afterPath="$PROJECT_DIR$/Vigenere Solver.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,26 +16,8 @@
       <file leaf-file-name="Caesar Solver.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Caesar Solver.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="41" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Monoalphabetic Substitution.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Monoalphabetic Substitution.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="14" selection-start-line="15" selection-end-line="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Monoalphabetic Substitution with Alphabet.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Monoalphabetic Substitution with Alphabet.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="43" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="43" />
+            <state relative-caret-position="51">
+              <caret line="3" column="25" lean-forward="true" selection-end-line="3" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -41,8 +25,8 @@
       <file leaf-file-name="Vigenere Solver.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Vigenere Solver.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+            <state relative-caret-position="353">
+              <caret line="75" column="54" selection-start-line="75" selection-start-column="54" selection-end-line="75" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -65,6 +49,7 @@
         <option value="$PROJECT_DIR$/Frequency Analysis.py" />
         <option value="$PROJECT_DIR$/Monoalphabetic Substitution.py" />
         <option value="$PROJECT_DIR$/Monoalphabetic Substitution with Alphabet.py" />
+        <option value="$PROJECT_DIR$/Caesar Solver.py" />
         <option value="$PROJECT_DIR$/Vigenere Solver.py" />
       </list>
     </option>
@@ -198,7 +183,7 @@
       <window_info anchor="right" id="R Packages" order="2" />
       <window_info anchor="right" id="R Graphics" order="0" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.3286385" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.3286385" />
       <window_info anchor="bottom" id="Version Control" order="2" />
       <window_info anchor="bottom" id="Python Console" order="3" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
@@ -225,13 +210,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Caesar Solver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="41" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Monoalphabetic Substitution.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -246,10 +224,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Caesar Solver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="25" lean-forward="true" selection-end-line="3" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Vigenere Solver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+        <state relative-caret-position="353">
+          <caret line="75" column="54" selection-start-line="75" selection-start-column="54" selection-end-line="75" selection-end-column="54" />
         </state>
       </provider>
     </entry>
