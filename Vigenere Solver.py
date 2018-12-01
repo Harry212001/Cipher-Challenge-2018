@@ -7,7 +7,7 @@ def letterPlus(letter,i):
     letterNum = (letterNum+i-65)%26 + 65
     return chr(letterNum)
 
-def caesarSolve(caesText):
+def caesarSolve(caesText, vKey):
     englishLetterFrequencies = {"A": 8.12, "B": 1.49, "C": 2.71, "D": 4.32, "E": 12.02, "F": 2.30, "G": 2.03, "H": 5.92,
                                 "I": 7.31, "J": 0.10, "K": 0.69, "L": 3.98, "M": 2.61, "N": 6.95, "O": 7.68, "P": 1.82,
                                 "Q": 0.11, "R": 6.02, "S": 6.28, "T": 9.10, "U": 2.88, "V": 1.11, "W": 2.09, "X": 0.17,
@@ -35,7 +35,8 @@ def caesarSolve(caesText):
     for let in caesText:
         if ord(let) >= 65 and ord(let) <= 90:
             newText += letterPlus(let, key)
-    return newText
+    vKey += chr(65+key)
+    return newText,vKey
 
 def ic(inputText):
     letterCounts = [0]*26
@@ -72,13 +73,15 @@ while keylength == 0:
 splitText = ['']*keylength
 caesaredText = ['']*keylength
 plainText = ''
+vigKey = ''
 for i in range(keylength):
     for j in range(math.ceil(len(cipherText)/keylength)):
         if j*keylength+i < len(cipherText):
             splitText[i] += cipherText[j*keylength+i]
-    caesaredText[i] = caesarSolve(splitText[i])
+    caesaredText[i],vigKey = caesarSolve(splitText[i],vigKey)
 for i in range(len(caesaredText[0])):
     for j in range(keylength):
         if i < len(caesaredText[j]):
             plainText += caesaredText[j][i]
+print(vigKey)
 print(plainText)

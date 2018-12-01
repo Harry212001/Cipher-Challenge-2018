@@ -7,5 +7,5 @@ for letter in cipherText:
 
 for letter in letterCounts:
     letterCounts[letter] = letterCounts[letter]*100/len(cipherText)
-    print(letter + " English: " + "="*int(round(englishLetterFrequencies[letter]*10)) + " "*(150-int(englishLetterFrequencies[letter])) + englishLetterFrequencies[letter])
-    print(letter + "  Cipher: " + "="*int(letterCounts[letter]*10) + " "*(150-int(letterCounts[letter])) + letterCounts[letter])
+    print(letter + " English: " + "="*int(round(englishLetterFrequencies[letter]*10)) + " "*(150-int(englishLetterFrequencies[letter])) + str(englishLetterFrequencies[letter]))
+    print(letter + "  Cipher: " + "="*int(letterCounts[letter]*10) + " "*(150-int(letterCounts[letter])) + str(letterCounts[letter]))
