@@ -1,6 +1,7 @@
 import random
 import math
 from math import log10
+import time
 
 
 def decision(probability):
@@ -112,7 +113,6 @@ class ngram_score(object):
             else: score += self.floor
         return(score)
 
-
 ciphText = input('Input ciphertext: ')
 TEMP = float(input('Input starting temperature: '))
 STEP = float(input('Input step: '))
@@ -122,7 +122,11 @@ print(parent)
 fitness = ngram_score('english_quadgrams.txt')
 parText = playfair_solve(ciphText, parent)
 parFit = fitness.score(parText)
+best = parent
+bestFit = parFit
 while TEMP >= 0:
+    print(TEMP)
+    time.clock()
     for C in range(COUNT,0,-1):
         child = child_key(parent)
         chiText = playfair_solve(ciphText, child)
@@ -131,22 +135,14 @@ while TEMP >= 0:
         if dF > 0:
             parent = child
             parFit = chiFit
-            print(parent[0])
-            print(parent[1])
-            print(parent[2])
-            print(parent[3])
-            print(parent[4])
         else:
             if decision(math.exp(dF/TEMP)):
                 parent = child
                 parFit = chiFit
-                print(parent[0])
-                print(parent[1])
-                print(parent[2])
-                print(parent[3])
-                print(parent[4])
-        print(C)
-    TEMP = TEMP - STEP
-    print(TEMP)
-print(parent)
-print(playfair_solve(ciphText, parent))
+        if bestFit > chiFit:
+            bestFit = chiFit
+            best = child
+    print(time.clock())
+    TEMP -= STEP
+print(best)
+print(playfair_solve(ciphText, best))

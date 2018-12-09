@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.1": {
-      "Playfair Cipher/1.0.0": {
+      "PlayfairSpeedy/1.0.0": {
         "runtime": {
-          "Playfair Cipher.dll": {}
+          "PlayfairSpeedy.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "Playfair Cipher/1.0.0": {
+    "PlayfairSpeedy/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

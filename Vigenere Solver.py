@@ -48,8 +48,8 @@ def ic(inputText):
     return ioc/(len(inputText)*(len(inputText)-1))
 
 def IoC(ciphText):
-    IoC = [0] * 50
-    for i in range(1,50):
+    IoC = [0] * 15
+    for i in range(1,15):
         splitText = ['']*i
         for j in range(i):
             for k in range(math.ceil(len(ciphText)/i)):

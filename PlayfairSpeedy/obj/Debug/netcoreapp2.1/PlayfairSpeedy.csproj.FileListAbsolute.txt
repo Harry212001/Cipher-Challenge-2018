@@ -1,0 +1,11 @@
+C:\Users\harry_000\Documents\Cipher-Challenge-2018\PlayfairSpeedy\bin\Debug\netcoreapp2.1\PlayfairSpeedy.deps.json
+C:\Users\harry_000\Documents\Cipher-Challenge-2018\PlayfairSpeedy\bin\Debug\netcoreapp2.1\PlayfairSpeedy.runtimeconfig.json
+C:\Users\harry_000\Documents\Cipher-Challenge-2018\PlayfairSpeedy\bin\Debug\netcoreapp2.1\PlayfairSpeedy.runtimeconfig.dev.json
+C:\Users\harry_000\Documents\Cipher-Challenge-2018\PlayfairSpeedy\bin\Debug\netcoreapp2.1\PlayfairSpeedy.dll
+C:\Users\harry_000\Documents\Cipher-Challenge-2018\PlayfairSpeedy\bin\Debug\netcoreapp2.1\PlayfairSpeedy.pdb
+C:\Users\harry_000\Documents\Cipher-Challenge-2018\PlayfairSpeedy\obj\Debug\netcoreapp2.1\PlayfairSpeedy.csprojAssemblyReference.cache
+C:\Users\harry_000\Documents\Cipher-Challenge-2018\PlayfairSpeedy\obj\Debug\netcoreapp2.1\PlayfairSpeedy.csproj.CoreCompileInputs.cache
+C:\Users\harry_000\Documents\Cipher-Challenge-2018\PlayfairSpeedy\obj\Debug\netcoreapp2.1\PlayfairSpeedy.AssemblyInfoInputs.cache
+C:\Users\harry_000\Documents\Cipher-Challenge-2018\PlayfairSpeedy\obj\Debug\netcoreapp2.1\PlayfairSpeedy.AssemblyInfo.cs
+C:\Users\harry_000\Documents\Cipher-Challenge-2018\PlayfairSpeedy\obj\Debug\netcoreapp2.1\PlayfairSpeedy.dll
+C:\Users\harry_000\Documents\Cipher-Challenge-2018\PlayfairSpeedy\obj\Debug\netcoreapp2.1\PlayfairSpeedy.pdb

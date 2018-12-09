@@ -1,0 +1,11 @@
+C:\Users\harry_000\Documents\Cipher-Challenge-2018\C#\bin\release\netcoreapp2.1\Playfair_Cipher.deps.json
+C:\Users\harry_000\Documents\Cipher-Challenge-2018\C#\bin\release\netcoreapp2.1\Playfair_Cipher.runtimeconfig.json
+C:\Users\harry_000\Documents\Cipher-Challenge-2018\C#\bin\release\netcoreapp2.1\Playfair_Cipher.runtimeconfig.dev.json
+C:\Users\harry_000\Documents\Cipher-Challenge-2018\C#\bin\release\netcoreapp2.1\Playfair_Cipher.dll
+C:\Users\harry_000\Documents\Cipher-Challenge-2018\C#\bin\release\netcoreapp2.1\Playfair_Cipher.pdb
+C:\Users\harry_000\Documents\Cipher-Challenge-2018\C#\obj\release\netcoreapp2.1\Playfair_Cipher.csprojAssemblyReference.cache
+C:\Users\harry_000\Documents\Cipher-Challenge-2018\C#\obj\release\netcoreapp2.1\Playfair_Cipher.csproj.CoreCompileInputs.cache
+C:\Users\harry_000\Documents\Cipher-Challenge-2018\C#\obj\release\netcoreapp2.1\Playfair_Cipher.AssemblyInfoInputs.cache
+C:\Users\harry_000\Documents\Cipher-Challenge-2018\C#\obj\release\netcoreapp2.1\Playfair_Cipher.AssemblyInfo.cs
+C:\Users\harry_000\Documents\Cipher-Challenge-2018\C#\obj\release\netcoreapp2.1\Playfair_Cipher.dll
+C:\Users\harry_000\Documents\Cipher-Challenge-2018\C#\obj\release\netcoreapp2.1\Playfair_Cipher.pdb

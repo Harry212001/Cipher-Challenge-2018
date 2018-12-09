@@ -687,11 +687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\harry_000\\Documents\\C#\\Playfair Cipher\\Playfair Cipher.csproj",
-      "projectName": "Playfair Cipher",
-      "projectPath": "C:\\Users\\harry_000\\Documents\\C#\\Playfair Cipher\\Playfair Cipher.csproj",
+      "projectUniqueName": "C:\\Users\\harry_000\\Documents\\Cipher-Challenge-2018\\C#\\Project.csproj",
+      "projectName": "Project",
+      "projectPath": "C:\\Users\\harry_000\\Documents\\Cipher-Challenge-2018\\C#\\Project.csproj",
       "packagesPath": "C:\\Users\\harry_000\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\harry_000\\Documents\\C#\\Playfair Cipher\\obj\\",
+      "outputPath": "C:\\Users\\harry_000\\Documents\\Cipher-Challenge-2018\\C#\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

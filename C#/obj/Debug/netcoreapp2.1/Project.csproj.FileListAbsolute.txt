@@ -1,0 +1,11 @@
+C:\Users\harry_000\Documents\Cipher-Challenge-2018\C#\bin\Debug\netcoreapp2.1\Project.deps.json
+C:\Users\harry_000\Documents\Cipher-Challenge-2018\C#\bin\Debug\netcoreapp2.1\Project.runtimeconfig.json
+C:\Users\harry_000\Documents\Cipher-Challenge-2018\C#\bin\Debug\netcoreapp2.1\Project.runtimeconfig.dev.json
+C:\Users\harry_000\Documents\Cipher-Challenge-2018\C#\bin\Debug\netcoreapp2.1\Project.dll
+C:\Users\harry_000\Documents\Cipher-Challenge-2018\C#\bin\Debug\netcoreapp2.1\Project.pdb
+C:\Users\harry_000\Documents\Cipher-Challenge-2018\C#\obj\Debug\netcoreapp2.1\Project.csprojAssemblyReference.cache
+C:\Users\harry_000\Documents\Cipher-Challenge-2018\C#\obj\Debug\netcoreapp2.1\Project.csproj.CoreCompileInputs.cache
+C:\Users\harry_000\Documents\Cipher-Challenge-2018\C#\obj\Debug\netcoreapp2.1\Project.AssemblyInfoInputs.cache
+C:\Users\harry_000\Documents\Cipher-Challenge-2018\C#\obj\Debug\netcoreapp2.1\Project.AssemblyInfo.cs
+C:\Users\harry_000\Documents\Cipher-Challenge-2018\C#\obj\Debug\netcoreapp2.1\Project.dll
+C:\Users\harry_000\Documents\Cipher-Challenge-2018\C#\obj\Debug\netcoreapp2.1\Project.pdb
