@@ -19,26 +19,21 @@ namespace Playfair_Cipher {
 
 
     class Key {
-        string keyword;
         char[][] key;
-        public Key(string kw) {
-            char tempChar;
-            List<char> tempArr = kw.ToList();
-            for (int i=0; i<tempArr.Count; i++) {
-                tempChar = tempArr[i];
-                tempArr[i] = '?';
-                while (tempArr.Contains(tempChar)) {
-                    tempArr.Remove(tempChar);
-                }
-                tempArr[i] = tempChar;
+        public Key() {
+            key = new char[5][];
+            for (int i = 0; i <= 4; i++) {
+            key[i] = new char[5];
             }
-            if (kw == "") {
-                keyword = "";
+            List<int> numList = Enumerable.Range(65,26).ToList();
+            numList.RemoveAt(9);
+            Random rnd = new Random();
+            int randNum = new int();
+            for (int i = 0; i<=24; i++) {
+                randNum = rnd.Next(0,numList.Count());
+                key[i/5][i%5] = (char)numList[randNum];
+                numList.RemoveAt(randNum);
             }
-            else {
-                keyword = string.Join("", tempArr);
-            }
-            generate_key();
         }
 
         int[] find_index(char letter) {
@@ -58,7 +53,7 @@ namespace Playfair_Cipher {
                 return (a%n + n)%n;
             }
             StringBuilder newText = new StringBuilder("", ciphText.Length);
-            for (int i = 0; i<=ciphText.Length/2-1; i++) {
+            for (int i = 0; i<=((ciphText.Length/2)-1); i++) {
                 int[] coord1 = find_index(ciphText[i*2]);
                 int[] coord2 = find_index(ciphText[i*2+1]);
                 int[] newCoord1 = new int[2];
@@ -88,25 +83,59 @@ namespace Playfair_Cipher {
             return newText.ToString();
         }
 
-        void generate_key() {
-            key = new char[5][];
-            for (int i = 0; i <= 4; i++) {
-            key[i] = new char[5];
+        public Key child_key() {
+            Key childKey = this;
+            Random rnd = new Random();
+            int x1 = new int();
+            int x2 = new int();
+            int y1 = new int();
+            int y2 = new int();
+            int rndNum = rnd.Next(0,50);
+            char[] tempArr = new char[5];
+            char tempChar = new char();
+            switch (rndNum) {
+                case 0:
+                    Array.Reverse(childKey.key);
+                    break;
+                case 1:
+                    y1 = rnd.Next(0,5);
+                    y2 = rnd.Next(0,5);
+                    tempArr = childKey.key[y1];
+                    childKey.key[y1] = childKey.key[y2];
+                    childKey.key[y1] = tempArr;
+                    break;
+                case 2:
+                    x1 = rnd.Next(0,5);
+                    x2 = rnd.Next(0,5);
+                    for (int j=0; j<=4; j++) {
+                        tempChar = childKey.key[j][x1];
+                        childKey.key[j][x1] = childKey.key[j][x2];
+                        childKey.key[j][x2] = tempChar;
+                    }
+                    break;
+                case 3:
+                    Array.Reverse(childKey.key);
+                    for (int j = 0; j<=4; j++) {
+                        Array.Reverse(childKey.key[j]);
+                    }
+                    break;
+                case 4:
+                    for (int j = 0; j<=4; j++) {
+                        Array.Reverse(childKey.key[j]);
+                    }
+                    break;
+                default:
+                    x1 = rnd.Next(0,5);
+                    x2 = rnd.Next(0,5);
+                    y1 = rnd.Next(0,5);
+                    y2 = rnd.Next(0,5);
+                    tempChar = childKey.key[y1][x1];
+                    childKey.key[y1][x1] = childKey.key[y2][x2];
+                    childKey.key[y2][x2] = tempChar;
+                    break;
             }
-            List<int> numList = Enumerable.Range(65,26).ToList();
-            numList.RemoveAt(9);
-            for (int i = 0; i<=24; i++) {
-                if (i<keyword.Length) {
-                    key[i/5][i%5] = keyword[i];
-                    numList.Remove(keyword[i]);
-                }
-                else {
-                    key[i/5][i%5] = (char)numList[0];
-                    numList.RemoveAt(0);
-                }
-            }
+            return childKey;
         }
-
         public char[][] GetKey() {
             return this.key;
         } 
@@ -134,7 +163,6 @@ namespace Playfair_Cipher {
             }
             floor = Math.Log10(0.01/(double)N);
         }
-
         public double score(string text) {
             double score = 0;
             for (int i = 0; i<=(text.Length-4); i++) {
@@ -153,27 +181,48 @@ namespace Playfair_Cipher {
         static void Main(string[] args) {
             string[] file = File.ReadAllLines(@"C:\Users\harry_000\Documents\Cipher-Challenge-2018\C#\CipherText.txt");
             string ciphText = file[3];
-            string sample = File.ReadAllLines(@"C:\Users\harry_000\Documents\Cipher-Challenge-2018\Words.txt")[0];
-            string[] words = sample.Split(' ');
+            double TEMP = Convert.ToDouble(file[0].Split(' ')[1]);
+            double STEP = Convert.ToDouble(file[1].Split(' ')[1]);
+            int COUNT = Convert.ToInt32(file[2].Split(' ')[1]);
+            Key parent = new Key();
+            Key child = parent;
+            Key best = parent;
             ngram_score fitness = new ngram_score(@"C:\Users\harry_000\Documents\Cipher-Challenge-2018\english_quadgrams.txt");
-            Key bestkey = new Key("");
-            string text = bestkey.playfair_solve(ciphText);
-            double bestFit = fitness.score(text);
-            double testFit;
-            foreach (string word in words) {
-                Key test = new Key(word);
-                text = test.playfair_solve(ciphText);
-                testFit = fitness.score(text);
-                if (testFit>bestFit) {
-                    bestkey = test;
-                    bestFit = testFit;
-                    Console.Clear();
-                    Console.WriteLine(text);
-                    Console.WriteLine(testFit);
+            string parText = parent.playfair_solve(ciphText);
+            double parFit = fitness.score(parText);
+            double bestFit = parFit;
+            double dF;
+            double chiFit;
+            string chiText;
+            int c;
+            Decision dcs = new Decision();
+            while (TEMP>=0) {
+                Console.WriteLine("Temp: " + TEMP);
+                for (c = COUNT; c>=0; c--) {
+                    child = parent.child_key();
+                    chiText = child.playfair_solve(ciphText);
+                    chiFit = fitness.score(chiText);
+                    dF = parFit-chiFit;
+                    if (dF > 0) {
+                        parent = child;
+                        parFit = chiFit;
+                    }
+                    else {
+                        if (dcs.Make(Math.Exp(dF/TEMP))) {
+                            parent = child;
+                            parFit = chiFit;
+                        }
+                    }
+                    if (chiFit > bestFit) {
+                        best = child;
+                        bestFit = chiFit;
+                    }
                 }
+                TEMP -= STEP;
             }
-            Console.WriteLine("Best text: " + bestkey.playfair_solve(ciphText));
-            Console.WriteLine("Fit: " + bestFit);
+            Console.Clear();
+            Console.WriteLine("Plaintext: " + best.playfair_solve(ciphText));
+            Console.WriteLine("Key: " + best.GetKey() + "; Fitness: " + bestFit);
             Console.Beep();
         }
     }

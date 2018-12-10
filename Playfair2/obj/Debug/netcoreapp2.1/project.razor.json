@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "c:\\Users\\harry_000\\Documents\\Cipher-Challenge-2018\\Playfair2\\Playfair2.csproj",
+  "TargetFramework": "netcoreapp2.1",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "UnsupportedRazor",
+    "LanguageVersion": "1.0",
+    "Extensions": [
+      {
+        "ExtensionName": "UnsupportedRazorExtension"
+      }
+    ]
+  }
+}
